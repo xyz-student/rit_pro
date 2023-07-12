@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ballon_box {
+            height: 100vh;
+
+            display: flex;
+            /* flex-wrap: wrap; */
+            position: absolute;
+            bottom: 0%;
+            right: 0%;
+            width: 70%;
+            justify-content: flex-end;
+        }
+
+        .main {
+            position: relative;
+            height: 100px;
+            width: 30%;
+
+
+        }
+
+        .ballon {
+            /* background-color: red; */
+            animation: top 4s infinite linear;
+
+            width: 100%;
+            height: 100px;
+            /* background: #000; */
+            /* margin: 5px; */
+        }
+
+        .bl_1 {
+            animation-duration: 2s;
+        }
+
+        .bl_2 {
+            animation-duration: 4s;
+
+        }
+
+        .bl_3 {
+            animation-duration: 3s;
+
+        }
+
+        .bl_4 {
+
+            animation-duration: 6s;
+
+        }
+
+        @keyframes top {
+            100% {
+                transform: translateY(-20vh);
+            }
+
+            0% {
+                transform: translateY(100vh);
+
+            }
+        }
+
+        body {
+            overflow: hidden;
+            background-color: beige;
+
+        }
+
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .game {
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+
+        }
+
+        .stick {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            height: 20px;
+            width: 100%;
+
+
+        }
+
+        .stick {
+            animation: go 0.5s infinite linear;
+            position: absolute;
+            top: 80%;
+        }
+
+        @keyframes go {
+            0% {
+                transform: translateX(0px);
+            }
+
+            100% {
+                transform: translateX(1200px);
+            }
+        }
+
+        .stick>img {
+            /* transform: rotate(45deg); */
+        }
+
+        .item {
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            filter: hue-rotate(30deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game">
+        <div class="main">
+            <img src="/bow1.png" height="auto" width="50%" alt="">
+            <!-- <div class="stick st_1"><img src="./arraow.png" height="auto" width="30%" alt=""></div> -->
+        </div>
+        <div class="ballon_box">
+            <div class="ballon bl_1"><img src="bl.png" height="200px" width="100%" alt=""></div>
+            <div class="ballon bl_2"><img src="bl.png" height="200px" width="100%" alt=""></div>
+            <div class="ballon bl_3"><img src="bl.png" height="200px" width="100%" alt=""></div>
+            <div class="ballon bl_4"><img src="bl.png" height="200px" width="100%" alt=""></div>
+        </div>
+    </div>
+    <div class="item">
+        <h1></h1>
+    </div>
+    <script>
+        var ballon = document.querySelector(".ballon");
+        var bl1 = document.querySelector(".bl_1");
+        var bl2 = document.querySelector(".bl_2");
+        var bl3 = document.querySelector(".bl_3");
+        var bl4 = document.querySelector(".bl_4");
+        var img = document.querySelector("img");
+        var stick = document.querySelector(".stick");
+        var h1 = document.querySelector("h1");
+
+        var main = document.querySelector(".main");
+        window.addEventListener("mousemove", function (e) {
+            var Y = e.pageY;
+            main.style.top = Y * 1 + "px"
+
+
+
+            // if()
+            // visible
+            var cou = 0
+            bl1.addEventListener("click", function () {
+              
+                
+              
+                bl1.style.visibility = "hidden"
+
+                bl2.style.visibility = "visible"
+                bl3.style.visibility = "visible"
+                bl4.style.visibility = "visible"
+            })
+
+            bl2.addEventListener("click", function () {
+                bl2.style.visibility = "hidden"
+
+                bl1.style.visibility = "visible"
+                bl3.style.visibility = "visible"
+                bl4.style.visibility = "visible"
+            })
+            bl3.addEventListener("click", function () {
+                bl3.style.visibility = "hidden"
+
+                bl1.style.visibility = "visible"
+                bl2.style.visibility = "visible"
+                bl4.style.visibility = "visible"
+            })
+            bl4.addEventListener("click", function () {
+                bl4.style.visibility = "hidden"
+
+                bl1.style.visibility = "visible"
+                bl2.style.visibility = "visible"
+                bl3.style.visibility = "visible"
+            })
+
+
+
+
+            cou += 1;
+            console.log(cou)
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .ryu {
+            border: 1px solid red;
+            width: 435px;
+            height: 280px;
+            margin: -5% auto 0 auto;
+            /* positioning tweak */
+            background: url('run.png') no-repeat 0 0%;
+            animation: sprite  1s steps(8) infinite;
+        }
+
+        @keyframes sprite {
+            from {
+                background-position: 0 0%;
+            }
+
+            to {
+                background-position: 0 100%;
+            }
+        }
+
+        h1 {
+            font-size: 1.2em;
+        }
+
+        .p {
+            margin-top: 120px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Demo 1: Basic CSS Sprite Animation</h1>
+
+    <p>A looping sprite animation created with the CSS3 keyframe syntax using the steps() function. Not responsive
+        &mdash; try changing Ryu's height.</p>
+
+    <div class="ryu"></div>
+
+    <p class="p">Demo by Tom Bennet. <a
+            href="http://www.sitepoint.com/responsive-sprite-animations-imagemagick-greensock" target="_blank">See
+            article</a>.</p>
+</body>
+
+</html>

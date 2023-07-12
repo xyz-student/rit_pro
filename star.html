@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+        }
+
+        .main {
+            width: 400px;
+            height: 400px;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: box 12s infinite linear;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @keyframes box {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .box_1 {
+            background: rgb(0, 0, 0);
+            height: 400px;
+            box-shadow: 10px 10px 16px rgb(76, 245, 242);
+
+            overflow: hidden;
+            width: 400px;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            position: absolute;
+
+        }
+
+        .box_2 {
+            overflow: hidden;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(126, 126, 171, 0) 0%, rgba(65, 65, 145, 0) 0%, rgba(106, 247, 247, 1) 100%, rgba(0, 212, 255, 1) 100%);
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+            /* clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); */
+            position: absolute;
+            transform: translate(7%, 7%);
+            animation: ani 2s infinite linear;
+
+        }
+
+        .box_3 {
+            background: rgb(0, 0, 0);
+            overflow: hidden;
+            background-color: rgb(0, 0, 0);
+            height: 300px;
+            width: 300px;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            position: absolute;
+            transform: translate(16%, 16%);
+        }
+
+        @keyframes ani {
+            0% {
+                transform: rotate(0deg);
+
+            }
+
+            100% {
+                transform: rotate(360deg);
+
+            }
+        }
+
+
+
+        /* !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+        .box_11 {
+            background: rgb(0, 0, 0);
+            height: 400px;
+            box-shadow: 10px 10px 16px rgb(76, 245, 242);
+
+            overflow: hidden;
+            width: 400px;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            position: absolute;
+
+        }
+
+        .box_21 {
+            overflow: hidden;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(126, 126, 171, 0) 0%, rgba(65, 65, 145, 0) 0%, rgba(106, 247, 247, 1) 100%, rgba(0, 212, 255, 1) 100%);
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            position: absolute;
+            transform: translate(7%, 7%);
+            animation: ani1 12s infinite linear;
+
+        }
+
+        .box_31 {
+            background: rgb(0, 0, 0);
+            overflow: hidden;
+            background-color: rgb(0, 0, 0);
+            height: 300px;
+            width: 300px;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            position: absolute;
+            transform: translate(16%, 16%);
+        }
+
+        @keyframes ani1 {
+            0% {
+                transform: rotate(0deg);
+                 
+
+            }
+
+            100% {
+                transform: rotate(360deg);
+                
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="box_1"></div>
+        <div class="box_2"></div>
+        <div class="box_3"></div>
+
+    </div>
+
+
+    <div class="main">
+        <div class="box_11"></div>
+        <div class="box_21"></div>
+        <div class="box_31"></div>
+
+    </div>
+
+</body>
+
+</html>

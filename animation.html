@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main{
+            width: 400px;
+            height: 400px;
+             
+            position: relative;
+        }
+        .box_1{
+            /* background: rgb(154, 238, 242);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(126,126,171,0) 0%, rgba(65,65,145,0) 52%, rgba(106,247,247,1) 100%, rgba(0,212,255,1) 100%); */
+            height: 400px;
+            box-shadow: 10px 10px 16px rgb(76, 245, 242);
+
+            width: 400px;border-radius: 50%;
+            position: absolute;
+            animation: ani 2s infinite linear ;
+        }
+        .box_2{
+            background-color: rgb(0, 0, 0);
+            height: 350px;
+            width: 350px;clip-path: circle(46.6% at 50% 50%);
+            position: absolute;
+            transform: translate(7%,7%);
+        }
+        @keyframes ani{
+100%{
+    transform: rotate(360deg);
+     
+}
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="box_1"></div>
+        <div class="box_2"></div>
+
+    </div>
+
+</body>
+
+</html>

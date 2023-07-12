@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .main {
+            display: flex;
+            width: 60%;
+            overflow: hidden;
+        }
+
+        .main>div {
+            position: relative;
+            width: 50%;
+            height: 50vh;
+            border: 2px solid rgba(0, 0, 0, 0.505);
+        }
+
+        .item1 {
+            background-color: rgb(38 165 90);
+        }
+
+        .item2 {
+            background-color: rgb(38 165 90);
+        }
+
+        .body {
+            height: 70vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay_1 {
+            position: absolute;
+            height: 100%;
+            width: 0%;
+            background-color: rgb(249, 203, 252);
+            box-shadow: 5px 5px 12px rgb(252, 195, 195);
+        }
+
+        .overlay_2 {
+            position: absolute;
+            /* right: -100%; */
+
+            left: 102%;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(148, 239, 253);
+            box-shadow: 5px 5px 12px 10px rgb(148, 239, 253);
+
+        }
+
+        @media screen and (max-width:700px) {
+            .main {
+                width: 90%;
+            }
+        }
+        h1{
+            color: white;
+            text-align: center;
+            padding-top:  50px;
+        }
+        body{
+            background-color: rgb(0, 0, 0);
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    
+   
+    <h1>Welcome My Gamers</h1>
+    <div class="body">
+        <div class="main">
+            <div class="item1">
+                <div class="overlay_1"></div>
+            </div>
+            <div class="item2">
+                <div class="overlay_2"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let item1 = document.querySelector(".item1")
+        let item2 = document.querySelector(".item2")
+        let score1 = document.querySelector(".score1")
+        let score2 = document.querySelector(".score2")
+        let overlay_1 = document.querySelector(".overlay_1")
+        let overlay_2 = document.querySelector(".overlay_2")
+
+        // player 1
+        let name1 = prompt("player 1 name is :")
+        let name2 = prompt("player 2 name is :")
+
+        function play_now() {
+            var play_add = 1;
+
+            item1.addEventListener("click", () => {
+                play_add += 5;
+                // score1.innerHTML = play_add
+                overlay_1.style.width = ` ${play_add}% `;
+                if (play_add === 101) {
+                    alert("Player 1 is win   :" + name1)
+                    document.body.style.visibility = "hidden";
+                }
+            })
+            var play_add1 = 100;
+
+            item2.addEventListener("click", () => {
+                play_add1 -= 5;
+                // score2.innerHTML = play_add1
+                overlay_2.style.left = `${play_add1}%`
+                if (play_add1 === 0) {
+                    alert("Player 1 is win :" +  name2)
+                    document.body.style.visibility = "hidden";
+
+                }
+            })
+
+
+        }
+
+        play_now()
+
+
+    </script>
+
+</body>
+
+</html>

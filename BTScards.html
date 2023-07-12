@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .main{
+            float: right;
+            width: 60%;
+            /* text-align: center; */
+        }
+        .box{
+            width: 40%;
+            float: left;
+        }
+        body{
+            background-color: rgb(77, 10, 77);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src=" " class="img" height="auto" width="50%" alt="">
+    </div>
+    <div class="box">
+        <img src="rm.jpg" onclick="img_1()" height="auto" width="10%" alt="">
+        <br><img src="jk.jpg"  onclick="img_2()"height="auto" width="10%" alt="">
+        <br><img src="hobi.webp" onclick="img_3()" height="auto" width="10%" alt="">
+        <br><img src="suga.jpg" onclick="img_4()" height="auto" width="10%" alt="">
+        <br><img src="v.webp" onclick="img_5()" height="auto" width="10%" alt="">
+        <br><img src="jimmin.jpg" onclick="img_6()" height="auto" width="10%" alt="">
+        <br><img src="jin.jfif" onclick="img_7()" height="auto" width="10%" alt="">
+    </div>
+
+    <script>
+        var img = document.querySelector(".img");
+
+        function img_1(){
+            img.src = "rm.jpg";
+        }
+        function img_2(){
+            img.src = "jk.jpg";
+        }
+        function img_3(){
+            img.src = "hobi.webp";
+        }
+        function img_4(){
+            img.src = "suga.jpg";
+        }
+        function img_5(){
+            img.src = "v.webp";
+        }
+        function img_6(){
+            img.src = "jimmin.jpg";
+        }
+        function img_7(){
+            img.src = "jin.jfif";
+        }
+        
+    </script>
+</body>
+
+</html>
